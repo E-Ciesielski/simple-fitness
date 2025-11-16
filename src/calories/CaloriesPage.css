@@ -1,0 +1,61 @@
+.date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-text {
+    margin: 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--c-bg-secondary);
+    border: none;
+    border-radius: 12px;
+    padding: 1em;
+}
+
+.calories {
+    padding: 0;
+    list-style: none;
+    background-color: var(--c-bg-secondary);
+    border-radius: 12px;
+}
+
+.calories-item {
+    padding: 1em;
+    border-bottom: solid 1px black;
+}
+
+.calories-item:last-child {
+    border: none;
+}
+
+.calories-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.input {
+    border-radius: 12px;
+    border: none;
+    padding: 1em;
+}
+
+.calories-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+.calories-header{
+    margin-bottom: 0;
+}
