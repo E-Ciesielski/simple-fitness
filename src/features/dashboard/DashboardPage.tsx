@@ -1,7 +1,7 @@
 export default function DashboardPage() {
   return (
     <>
-      <h2 className="page-heading">Dashboard</h2>
+      <h1>Dashboard</h1>
     </>
   );
 }

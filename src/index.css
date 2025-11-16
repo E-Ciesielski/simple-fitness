@@ -1,23 +1,17 @@
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
 :root {
-	--c-bg-primary: lightgray;
+	--c-bg-primary: #bddcfc;
 	--c-bg-secondary: white;
-	--c-text: black;
 }
 
-:root {
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-*, *:after, *before {
+*, *:after, *:before {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	color: var(--c-text);
+	font-family: "Roboto", sans-serif;
+	background-color: var(--c-bg-primary);
 } 
-
-.page-heading {
-	margin: 0;
-}
 
