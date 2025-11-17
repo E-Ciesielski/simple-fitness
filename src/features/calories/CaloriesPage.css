@@ -1,49 +1,100 @@
-.calories-date {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.date {
+    margin-top: 1rem;
 }
 
-.calories-date__heading {
+.date__text {
     margin: 0;
+    display: inline-block;
+    margin-left: 1rem;
 }
 
-.btn-icon {
-    padding: .5em;
-    border: 0;
-    border-radius: 8px;
+.date__icon {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.calories {
+    margin: 2rem 0;
+    padding: 1em;
+    position: relative;
+}
+
+.calories__text {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.calories__text-secondary {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.calories__settings {
+    font-size: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .card {
     background-color: var(--c-bg-secondary);
-    border-radius:8px;
-    padding: 1em;
+    border-radius: 12px;
 }
 
-.card__heading {
-    margin: 2rem 0 .5rem 0; 
+.calories__progress {
+    width: 300px;
+    height: 150px; 
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border: 20px solid gray;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin: auto;
 }
 
-.calories-info__text {
+.food-list {
+    margin: .5rem 0 0 0;
+}
+
+.food-item {
+    padding: 1em 1em;
+    border-bottom: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-item__calories {
+    font-weight: 700;
+    margin-right: .5rem;
+}
+
+.food-item:last-child {
+    border: 0;
+}
+
+.food-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.food-header__text {
     margin: 0;
 }
 
-.calories-info {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.calories-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.calories-list__item {
+.btn {
+    border: 0;
+    border-radius: 12px;
     padding: .5em 1em;
-    border-bottom: solid 1px var(--c-text-secondary);
+    font-size: 1rem;
 }
 
-.calories-list__item:last-child {
-    border: none;
+@media(min-width: 1000px) {
+    .calories-page {
+        max-width: 800px;
+        margin: auto;
+    }
 }

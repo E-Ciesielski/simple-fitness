@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, Outlet } from "react-router";
 import "./AppLayout.css";
 import { useState } from "react";
 
@@ -23,7 +23,9 @@ export default function AppLayout() {
           onClick={handleToggleNav}
         ></i>
       </div>
-      <div className="main-layout__content">Test</div>
+      <div className="main-layout__content">
+        <Outlet />
+      </div>
     </div>
   );
 }
