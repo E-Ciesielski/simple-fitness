@@ -1,48 +1,29 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink } from "react-router";
 import "./AppLayout.css";
+import { useState } from "react";
 
 export default function AppLayout() {
+  const [showNav, setShowNav] = useState(false);
+
+  function handleToggleNav() {
+    setShowNav(!showNav);
+  }
   return (
-    <div className="app-layout">
-      <Outlet />
-      <nav className="app-nav">
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "app-nav__link--active" : "app-nav__link"
-          }
-          to="/"
-        >
-          <i className="bi bi-house nav-icon"></i>
-          Home
+    <div className="main-layout">
+      <div className="nav__wrapper">
+        <NavLink to="/" className="logo">
+          Fitness
         </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "app-nav__link--active" : "app-nav__link"
-          }
-          to="calories"
-        >
-          <i className="bi bi-fire nav-icon"></i>
-          Calories
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "app-nav__link--active" : "app-nav__link"
-          }
-          to="/"
-        >
-          <i className="bi bi-card-list nav-icon"></i>
-          Workout
-        </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "app-nav__link--active" : "app-nav__link"
-          }
-          to="/"
-        >
-          <i className="bi bi-list nav-icon"></i>
-          Menu
-        </NavLink>
-      </nav>
+        <nav className={showNav ? "nav" : "nav nav--hide"}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/calories">Calories</NavLink>
+        </nav>
+        <i
+          className={(showNav ? "bi-x-lg" : "bi-list") + " bi nav__icon"}
+          onClick={handleToggleNav}
+        ></i>
+      </div>
+      <div className="main-layout__content">Test</div>
     </div>
   );
 }

@@ -1,8 +1,11 @@
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-	--c-bg-primary: #bddcfc;
+	--c-bg-primary: #d3d3d3;
 	--c-bg-secondary: white;
+	--c-primary: #FF7900;
+	--c-text: black;
+	--c-text-secondary: #797979;
 }
 
 *, *:after, *:before {
@@ -13,5 +16,14 @@ body {
 	margin: 0;
 	font-family: "Roboto", sans-serif;
 	background-color: var(--c-bg-primary);
+	color: var(--c-text);
 } 
 
+a {
+	text-decoration: none;
+	color: var(--c-text);
+}
+/* UTILITY */
+.d-none {
+	display: none;
+}
