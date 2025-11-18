@@ -3,9 +3,22 @@ import "./CaloriesPage.css";
 
 export default function CaloriesPage() {
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   function toggleDatePicker() {
     setShowDatePicker(!showDatePicker);
+  }
+
+  function handleDateChange(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const dateString = formData.get("date")?.toString();
+    if (dateString) {
+      setSelectedDate(new Date(dateString));
+    }
+    setShowDatePicker(false);
   }
 
   return (
@@ -20,13 +33,34 @@ export default function CaloriesPage() {
             (showDatePicker ? "date-picker--active " : "") + "date-picker card"
           }
         >
-          <input type="date" className="input date-picker__input" />
-          <div className="date-picker__actions">
-            <button className="btn btn--secondary">Cancel</button>
-            <button className="btn btn--primary">Done</button>
-          </div>
+          <form method="post" onSubmit={handleDateChange}>
+            <input
+              type="date"
+              className="input date-picker__input"
+              name="date"
+              defaultValue={
+                selectedDate.getFullYear() +
+                "-" +
+                (selectedDate.getMonth() + 1) +
+                "-" +
+                selectedDate.getDate()
+              }
+            />
+            <div className="date-picker__actions">
+              <button
+                type="button"
+                className="btn btn--secondary"
+                onClick={toggleDatePicker}
+              >
+                Cancel
+              </button>
+              <button type="submit" className="btn btn--primary">
+                Done
+              </button>
+            </div>
+          </form>
         </div>
-        <h2 className="date__text">Monday, Nov 17th</h2>
+        <h2 className="date__text">{selectedDate.toDateString()}</h2>
       </div>
       <div className="calories card">
         <div className="calories__progress">
