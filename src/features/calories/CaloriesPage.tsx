@@ -71,7 +71,7 @@ export default function CaloriesPage() {
       </div>
       <div className="food-header">
         <h2 className="food-header__text">Food</h2>
-        <button className="btn">New</button>
+        <button className="btn btn--primary">New</button>
       </div>
       <ul className="card food-list">
         <li className="food-item">
