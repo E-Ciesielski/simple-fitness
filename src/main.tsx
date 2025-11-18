@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import DashboardPage from "./features/dashboard/DashboardPage.tsx";
 import CaloriesPage from "./features/calories/CaloriesPage.tsx";
 import AppLayout from "./layouts/AppLayout.tsx";
+import CaloriesNewPage from "./features/calories/CaloriesNewPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -12,7 +13,8 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<DashboardPage />} />
-          <Route path="calories" element={<CaloriesPage />} />
+          <Route path="/calories" element={<CaloriesPage />} />
+          <Route path="/calories/new" element={<CaloriesNewPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

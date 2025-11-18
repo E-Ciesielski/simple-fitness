@@ -148,10 +148,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .input {
-    padding: .5em;
+    padding: .8em;
     border-radius: 12px;
     border: 1px solid var(--c-accent);
     outline: none;
+    font-size: 1rem;
 }
 
 @media(min-width: 1000px) {

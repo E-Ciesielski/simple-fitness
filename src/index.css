@@ -36,3 +36,11 @@ ul {
 .d-none {
 	display: none;
 }
+
+.w-100 {
+	width: 100%;
+}
+
+.w-25 {
+	width: 25%;
+}

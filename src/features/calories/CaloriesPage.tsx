@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./CaloriesPage.css";
+import { NavLink } from "react-router";
 
 export default function CaloriesPage() {
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -71,7 +72,9 @@ export default function CaloriesPage() {
       </div>
       <div className="food-header">
         <h2 className="food-header__text">Food</h2>
-        <button className="btn btn--primary">New</button>
+        <NavLink to="/calories/new" className="btn btn--primary">
+          New
+        </NavLink>
       </div>
       <ul className="card food-list">
         <li className="food-item">

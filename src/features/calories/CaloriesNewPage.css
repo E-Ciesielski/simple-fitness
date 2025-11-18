@@ -1,0 +1,15 @@
+.form-group label{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form__actions {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
