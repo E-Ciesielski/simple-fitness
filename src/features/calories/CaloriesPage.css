@@ -73,12 +73,6 @@
     border: solid 2px var(--c-accent);;
 }
 
-.card {
-    background-color: var(--c-bg-secondary);
-    border-radius: 12px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 .calories__progress {
     width: 300px;
     height: 150px; 
@@ -121,38 +115,6 @@
 
 .food-header__text {
     margin: 0;
-}
-
-.btn {
-    border: 0;
-    border-radius: 12px;
-    padding: .5em 1em;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.btn--primary {
-    background-color: var(--c-primary);
-    color: var(--c-text-2);
-}
-
-.btn--secondary {
-    background-color: var(--c-secondary);
-    color: var(--c-text);
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
-.input {
-    padding: .8em;
-    border-radius: 12px;
-    border: 1px solid var(--c-accent);
-    outline: none;
-    font-size: 1rem;
 }
 
 @media(min-width: 1000px) {

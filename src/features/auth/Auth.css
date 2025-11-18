@@ -1,0 +1,10 @@
+.auth-form {
+    top: 10%;
+    padding: 2em;
+    max-width: 600px;
+    margin: auto;
+}
+
+.auth-form__msg {
+    text-align: center;
+}

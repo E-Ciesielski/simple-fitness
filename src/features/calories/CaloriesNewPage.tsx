@@ -37,14 +37,14 @@ export default function CaloriesNewPage() {
       <form method="POST" className="form" onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
-          <input type="text" className="input w-100" id="name" name="name" />
+          <input type="text" className="input" id="name" name="name" />
           <div>{nameError}</div>
         </div>
         <div className="form-group">
           <label htmlFor="calories">Calories</label>
           <input
             type="number"
-            className="input w-25"
+            className="input"
             id="calories"
             name="calories"
           />
