@@ -12,7 +12,7 @@ export default function AppLayout() {
     <div className="main-layout">
       <div className="nav__wrapper">
         <NavLink to="/" className="logo">
-          Fitness
+          <span className="logo--primary">Simple</span>Fit
         </NavLink>
         <nav className={showNav ? "nav" : "nav nav--hide"}>
           <NavLink to="/">Home</NavLink>

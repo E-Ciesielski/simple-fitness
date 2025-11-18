@@ -1,10 +1,31 @@
+import { useState } from "react";
 import "./CaloriesPage.css";
 
 export default function CaloriesPage() {
+  const [showDatePicker, setShowDatePicker] = useState(false);
+
+  function toggleDatePicker() {
+    setShowDatePicker(!showDatePicker);
+  }
+
   return (
     <div className="calories-page">
       <div className="date">
-        <i className="bi bi-calendar2-week date__icon"></i>
+        <i
+          className="bi bi-calendar2-week date__icon"
+          onClick={toggleDatePicker}
+        ></i>
+        <div
+          className={
+            (showDatePicker ? "date-picker--active " : "") + "date-picker card"
+          }
+        >
+          <input type="date" className="input date-picker__input" />
+          <div className="date-picker__actions">
+            <button className="btn btn--secondary">Cancel</button>
+            <button className="btn btn--primary">Done</button>
+          </div>
+        </div>
         <h2 className="date__text">Monday, Nov 17th</h2>
       </div>
       <div className="calories card">
@@ -16,7 +37,7 @@ export default function CaloriesPage() {
       </div>
       <div className="food-header">
         <h2 className="food-header__text">Food</h2>
-        <button className="btn">new</button>
+        <button className="btn">New</button>
       </div>
       <ul className="card food-list">
         <li className="food-item">

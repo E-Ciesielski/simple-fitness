@@ -1,24 +1,30 @@
 .logo {
     font-size: 2rem;
+    font-style: italic;
+}
+
+.logo--primary {
+    color: var(--c-primary);
 }
 
 .nav {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .nav__icon {
     font-size: 2rem;
     position: absolute;
-    top: 1rem;
+    top: .8rem;
     right: 1rem;
 }
 
 .nav__wrapper {
-    padding: 1em;
+    padding: .8em 1em;
     background-color: var(--c-bg-secondary);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .nav--hide {

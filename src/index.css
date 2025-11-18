@@ -1,10 +1,13 @@
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-	--c-bg-primary: #d3d3d3;
-	--c-bg-secondary: white;
+	--c-bg-primary: #f4f3ef;
+	--c-bg-secondary: WHITE;
 	--c-primary: #FF7900;
+	--c-accent: #CBCBCB;
+	--c-secondary: #CBCBCB;
 	--c-text: black;
+	--c-text-2: white;
 	--c-text-secondary: #797979;
 }
 
